@@ -1,3 +1,62 @@
+Added 5 suction points for large floors, 1 for small floors, 5 for modular rooms, and 9 for various cargo ship cabins and outdoor platforms.
+
+The following equipment can be placed on the large floor, as well as in the four directions of the adsorption, and the center of the square prefabricated house and the four diagonal directions of 8 positions:
+Base Computer                       MIDDLE
+Electric Stealth Unit
+Save Point
+Save Beacon
+Information Module
+Small Refiner
+Signal Amplifier
+Message Beacon
+Nutrient Processor
+Architectural Research Unit
+Utopia Construction Station
+Reinforcement Boat Research Station
+Utopia Suit Station
+Utopia Spaceship Station
+Utopia Tool Station
+Automatic Feeder
+Atmosphere Collector
+Oxygen Collector
+Autonomous Miner
+Medium Refiner
+Byte Paipai Device
+Noise Box
+Short-Range Transmitter
+Small Hydroponic Plate
+Electromagnetic Generator
+Supply Warehouse
+Airbed Extractor It can be rotated 45° on the small floor, but it is not very convenient, and the direction of the small floor needs to be adjusted
+Mineral Deposit Extractor
+
+Battery Pack                Can be densely placed                 SMALL
+Solar Panel
+
+The following equipment can be placed in the center of the large floor and on the roof of the prefabricated house:
+Reinforcement Boat Summoning Station                 HUGE
+Pilgrim's Bay
+Giant Human Bay
+Minota Bay
+Wanderer Bay
+Nautilus Bay
+Nomad Bay
+Landing Site
+Alternative Landing Site
+
+The following equipment can be placed in the center of the large floor, as well as in the four directions of the floor, and in the center and four diagonal directions of the square prefabricated house:
+Base Transmission Module                      BIG
+Storage Box 0~9
+Appearance Modifier
+Large Refiner
+Antimatter Collector
+Animal Husbandry Device
+Abandoned Base Salvage Warehouse
+Trading Terminal
+
+
+
+
 为大地板添加了5个吸附点，小地板1个，模块房5个，各种货船舱室和室外平台9个。
 
 下述设备可以放置在大地板上，以及自身四个方向吸附，以及方形预制房的中心和四个斜角方向8个位置：
