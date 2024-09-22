@@ -1,0 +1,137 @@
+Added snap points for various common equipment and buildings, allowing them to snap to each other, themselves, large floors, small floors, large prefabs, small modular rooms, cargo ship holds, and external platforms.
+
+Now integrated with the Snappy module, with permission from EMPTY.d. See the notes below for details. This work was done by KuroPeach.
+
+For players who know how to use AMUMSS, it is now easier to add the buildings you want through LUA, just find the corresponding file path and add it to the corresponding size list.
+
+Remember: scaling will break snapping! !
+
+Added 5 snap points for large floors, 1 for small floors, 5 for small modular rooms, and 9 for various cargo ship cabins and external platforms.
+
+The following equipment can be placed on the floor, small modular room, cargo ship holds and external platform, in the four directions of itself, in the center of large prefabricated room and in the four diagonal directions: Medium building
+Base computer
+Electric cloaking unit
+Save point
+Save beacon
+Information module
+Small refiner
+Signal amplifier
+Message beacon
+Nutrient processor
+Building research unit
+Utopia construction station
+Reinforcement boat research station
+Utopia suit station
+Utopia spaceship station
+Utopia tool station
+Automatic feeder
+Atmosphere collector
+Oxygen collector
+Autonomous mining machine
+Medium refiner
+Byte pat device
+Noise box
+Short-range transmitter
+Small hydroponic plate
+Electromagnetic generator
+Supply warehouse
+
+Airbed extractor            can be rotated 45° on the small floor, but it is not very convenient, and the direction of the small floor needs to be adjusted
+Mineral bed extractor
+
+Battery pack                can be densely placed Small building
+Solar panel
+
+The following equipment can be placed in the center of the large floor and on the roof of the prefabricated room: Huge building
+Reinforcement boat summoning station
+Pilgrim's mooring bay
+Giant Human Bay
+Minota Bay
+Wanderer Bay
+Nautilus Bay
+Nomad Bay
+Landing Pad
+Alternative Landing Pad
+Various Prefabricated Houses
+
+The following equipment can be placed in the center of the large floor, in the four directions of itself, in the center of the large prefabricated house and in the four diagonal directions: Big buildings
+Base Teleport Module
+Storage Box 0~9
+Appearance Modifier
+Large Refiner
+Antimatter Collector
+Animal Husbandry Device
+Abandoned Base Salvage Warehouse
+Trading Terminal
+
+
+
+
+
+
+为大多数常用的设备和建筑提供了吸附点。
+Prepared for Chinese players, this branch has been approved by the current maintainer of the main branch. I am also one of the contributors. Please give priority to supporting the main branch 2113.
+
+为各种常用的设备和建筑提供了吸附点，使它们能够相互捕捉、自身捕捉以及捕捉到大地板，小地板，大型预制房，小型模块房，货船的货仓及外部平台之上。
+现在，经 EMPTY.d 许可，集成了 Snappy 模块。详情请参阅下面的注释。这项工作由 KuroPeach 完成。
+对于会使用AMUMSS的玩家，现在可以通过LUA更便捷的添加自己想要的建筑，只需要找到对应的文件路径，添加到对应的大小列表上即可。
+
+请记住：缩放会破坏捕捉！！
+
+为大地板添加了5个吸附点，小地板1个，小型模块房5个，各种货船舱室和室外平台9个。
+
+下述设备可以放置在地板、小型模块房、货仓及外部平台、自身的四个方向上、大型预制房的中心和四个斜角方向上：属于中型建筑 MIDDLE
+基地电脑 
+电力隐形单元
+存档点
+存档信标
+信息模块
+小型精炼机
+信号增强器
+留言信标
+营养处理器
+建筑研究单元
+乌托邦建造站
+强化艇研究站
+乌托邦套装站
+乌托邦飞船站
+乌托邦工具站
+自动喂食器
+大气收集器
+氧气收集器
+自主采矿机
+中型精炼机
+字节拍拍设备
+噪音盒
+短程传送器
+小水培盘
+电磁发电机
+补给仓库
+
+气床提取器   在小地板上可以45°旋转，但不是很方便，需要调整好小地板方向
+矿床提取器 
+
+电池组    可以密集放置 小型设备 SMALL
+太阳能板
+
+下述设备可以放置在大地板中心，以及预制房屋顶上：属于巨型建筑  HUGE
+强化艇召唤站 
+朝圣者泊湾
+巨  人泊湾
+米诺陶泊湾
+漫游者泊湾
+鹦鹉螺泊湾
+游牧民泊湾
+降落场
+替代降落场
+各种预制房
+
+下述设备可以放置在大地板中心、自身四个方向上、大型预制房的中心和四个斜角方向上：属于大型建筑 BIG
+基地传送模块  
+储藏箱0~9
+外观修改器
+大型精炼机
+反物质收集器
+畜牧装置
+废弃基地打捞仓
+交易终端
