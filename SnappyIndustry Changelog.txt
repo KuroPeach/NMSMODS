@@ -1,6 +1,6 @@
-Added snap points for various common equipment and buildings, allowing them to snap to each other, themselves, large floors, small floors, large prefabs, small modular rooms, cargo ship holds, and external platforms.
+Provided snap points for various commonly used equipment and buildings, allowing them to snap to each other, snap to themselves, and snap to snap points, and now achieve 0° 90° 180° -90° rotation. Added 5 snap points for large floors, 1 for small floors, and 9 for various cargo ship cabins and outdoor platforms.
 
-Now integrated with the Snappy module, with permission from EMPTY.d. See the notes below for details. This work was done by KuroPeach.
+Now integrated with the Snappy module, with permission from EMPTY.d, and added more buildings. See the notes below for details. This work was done by KuroPeach.
 
 For players who know how to use AMUMSS, it is now easier to add the buildings you want through LUA, just find the corresponding file path and add it to the corresponding size list.
 
@@ -36,10 +36,10 @@ Small hydroponic plate
 Electromagnetic generator
 Supply warehouse
 
-Airbed extractor            can be rotated 45° on the small floor, but it is not very convenient, and the direction of the small floor needs to be adjusted
+Airbed extractor            Change to 45° 135° -45° -135° rotation on small floors
 Mineral bed extractor
 
-Battery pack                can be densely placed Small building
+Battery pack                Small building  Can be densely placed 
 Solar panel
 
 The following equipment can be placed in the center of the large floor and on the roof of the prefabricated room: Huge building
@@ -54,7 +54,7 @@ Landing Pad
 Alternative Landing Pad
 Various Prefabricated Houses
 
-The following equipment can be placed in the center of the large floor, in the four directions of itself, in the center of the large prefabricated house and in the four diagonal directions: Big buildings
+The following equipment can be placed in the center of the large floor, in the four directions of itself, in the center of the large prefabricated house and in the four diagonal directions: Large buildings
 Base Teleport Module
 Storage Box 0~9
 Appearance Modifier
@@ -72,13 +72,12 @@ Trading Terminal
 为大多数常用的设备和建筑提供了吸附点。
 Prepared for Chinese players, this branch has been approved by the current maintainer of the main branch. I am also one of the contributors. Please give priority to supporting the main branch 2113.
 
-为各种常用的设备和建筑提供了吸附点，使它们能够相互捕捉、自身捕捉以及捕捉到大地板，小地板，大型预制房，小型模块房，货船的货仓及外部平台之上。
-现在，经 EMPTY.d 许可，集成了 Snappy 模块。详情请参阅下面的注释。这项工作由 KuroPeach 完成。
+为各种常用的设备和建筑提供了吸附点，使它们能够相互捕捉、自身捕捉以及捕捉到吸附点上，现已实现 0° 90° 180° -90°旋转。为大地板添加了5个吸附点，小地板1个，各种货船舱室和室外平台9个。
+
+现在，经 EMPTY.d 许可，集成了 Snappy 模块，并加入了更多设备。详情请参阅下面的注释。这项工作由 KuroPeach 完成。
 对于会使用AMUMSS的玩家，现在可以通过LUA更便捷的添加自己想要的建筑，只需要找到对应的文件路径，添加到对应的大小列表上即可。
 
 请记住：缩放会破坏捕捉！！
-
-为大地板添加了5个吸附点，小地板1个，小型模块房5个，各种货船舱室和室外平台9个。
 
 下述设备可以放置在地板、小型模块房、货仓及外部平台、自身的四个方向上、大型预制房的中心和四个斜角方向上：属于中型建筑 MIDDLE
 基地电脑 
@@ -108,7 +107,7 @@ Prepared for Chinese players, this branch has been approved by the current maint
 电磁发电机
 补给仓库
 
-气床提取器   在小地板上可以45°旋转，但不是很方便，需要调整好小地板方向
+气床提取器   在小地板上改为45° 135° -45° -135°旋转
 矿床提取器 
 
 电池组    可以密集放置 小型设备 SMALL
