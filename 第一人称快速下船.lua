@@ -1,10 +1,10 @@
 NMS_MOD_DEFINITION_CONTAINER =
 {
-["MOD_FILENAME"]    = "QuickShipExit.pak",
-["MOD_AUTHOR"]      = "Babscoole",
-["NMS_VERSION"]     = "5.12",
-["MOD_DESCRIPTION"] = "Exit ships instantly in 1st person",
-["MODIFICATIONS"]   =
+    ["MOD_FILENAME"]    = "QuickShipExit.pak",
+    ["MOD_AUTHOR"]      = "Babscoole",
+    ["NMS_VERSION"]     = "5.12",
+    ["MOD_DESCRIPTION"] = "Exit ships instantly in 1st person",
+    ["MODIFICATIONS"]   =
     {
         {
             ["MBIN_CHANGE_TABLE"] =
@@ -27,25 +27,26 @@ NMS_MOD_DEFINITION_CONTAINER =
                         {
                             ["SPECIAL_KEY_WORDS"] =
                             {
-                                {"Anim", "EXIT"},
-                                {"Anim", "EJECT"},
+                                { "Anim", "EXIT" },
+                                { "Anim", "EJECT" },
                             },
                             ["VALUE_CHANGE_TABLE"] =
                             {
-                                {"Speed", "5"},
+                                { "Speed", "5" },
                             }
                         },
                     }
                 },
                 {
-                    ["MBIN_FILE_SOURCE"]  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\COCKPIT\COCKPITA_INTERIOR\ENTITIES\COCKPITA.ENTITY.MBIN",
+                    ["MBIN_FILE_SOURCE"]  =
+                    "MODELS\COMMON\SPACECRAFT\DROPSHIPS\COCKPIT\COCKPITA_INTERIOR\ENTITIES\COCKPITA.ENTITY.MBIN",
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["SPECIAL_KEY_WORDS"] = {"Anim", "EXIT"},
+                            ["SPECIAL_KEY_WORDS"] = { "Anim", "EXIT" },
                             ["VALUE_CHANGE_TABLE"] =
                             {
-                                {"Speed", "5"},
+                                { "Speed", "5" },
                             }
                         },
                     }

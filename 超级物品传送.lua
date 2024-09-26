@@ -1,11 +1,11 @@
 NMS_MOD_DEFINITION_CONTAINER =
 {
-["MOD_FILENAME"]    = "_Exosolar's Super Ship Teleporter.pak",
-["MOD_AUTHOR"]      = "Exosolar",
-["LUA_AUTHOR"]      = "Babscoole",
-["NMS_VERSION"]     = "5.12",
-["MOD_DESCRIPTION"] = "",
-["MODIFICATIONS"]   =
+    ["MOD_FILENAME"]    = "_Exosolar's Super Ship Teleporter.pak",
+    ["MOD_AUTHOR"]      = "Exosolar",
+    ["LUA_AUTHOR"]      = "Babscoole",
+    ["NMS_VERSION"]     = "5.12",
+    ["MOD_DESCRIPTION"] = "",
+    ["MODIFICATIONS"]   =
     {
         {
             ["MBIN_CHANGE_TABLE"] =
@@ -15,10 +15,10 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["SPECIAL_KEY_WORDS"] = {"ID", "SHIP_TELEPORT"},
+                            ["SPECIAL_KEY_WORDS"] = { "ID", "SHIP_TELEPORT" },
                             ["VALUE_CHANGE_TABLE"] =
                             {
-                                {"Bonus", "114514"}
+                                { "Bonus", "114514" }
                             }
                         }
                     }

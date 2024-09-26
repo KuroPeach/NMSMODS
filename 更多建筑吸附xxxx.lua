@@ -1,25 +1,26 @@
-NMS_MOD_DEFINITION_CONTAINER = 
+NMS_MOD_DEFINITION_CONTAINER =
 {
-["MOD_FILENAME"]  = "Snappy Modules.pak",
-["MOD_AUTHOR"]	  = "EMPTY.d",
-["LUA_AUTHOR"]	  = "EMPTY.d",
-["NMS_VERSION"]	  = "4.41.0",
-["DESCRIPTION"]	  = "Add snapping points to certain building modules in game",
-["MODIFICATIONS"] = 
-	{
-		{
-			["MBIN_CHANGE_TABLE"] = 
-			{		
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\GASHARVESTER_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "PlacementData",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+  ["MOD_FILENAME"]  = "Snappy Modules.pak",
+  ["MOD_AUTHOR"]    = "EMPTY.d",
+  ["LUA_AUTHOR"]    = "EMPTY.d",
+  ["NMS_VERSION"]   = "4.41.0",
+  ["DESCRIPTION"]   = "Add snapping points to certain building modules in game",
+  ["MODIFICATIONS"] =
+  {
+    {
+      ["MBIN_CHANGE_TABLE"] =
+      {
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\GASHARVESTER_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "PlacementData", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="RefSnapPoint" />
       <Property name="NameHash" value="0" />
@@ -107,19 +108,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\REFINER2_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefTechSnapPoint",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\REFINER2_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefTechSnapPoint", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="RefSnapPoint_1" />
       <Property name="NameHash" value="0" />
@@ -207,19 +209,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},			
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\ANTIMATTERHARVESTER_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "PlacementData",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\ANTIMATTERHARVESTER_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "PlacementData", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
 <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="RefTechSnapScene" />
       <Property name="NameHash" value="0" />
@@ -307,19 +310,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\COMMONPARTS\TELEPORTER_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "PlacementData",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\COMMONPARTS\TELEPORTER_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "PlacementData", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_Vehicles" />
       <Property name="NameHash" value="0" />
@@ -437,19 +441,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},	
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\REFINER3_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "PlacementData",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\REFINER3_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "PlacementData", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_Vehicles" />
       <Property name="NameHash" value="0" />
@@ -567,20 +572,21 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASICPARTS\BASIC_FLOOR.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "SnapPoint_N",},
-							["SECTION_ACTIVE"] = {2},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASICPARTS\BASIC_FLOOR.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "SnapPoint_N", },
+              ["SECTION_ACTIVE"] = { 2 },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndFloorQrt_1" />
       <Property name="NameHash" value="0" />
@@ -1081,24 +1087,25 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASICPARTS\BASIC_FLOOR_QUARTER.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "SnapPoint_Floor",},
-							["REMOVE"]  = "SECTION"
-						},					
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "SnapPoint_StairsTop1",},
-							["SECTION_ACTIVE"] = {4},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASICPARTS\BASIC_FLOOR_QUARTER.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "SnapPoint_Floor", },
+              ["REMOVE"]            = "SECTION"
+            },
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "SnapPoint_StairsTop1", },
+              ["SECTION_ACTIVE"] = { 4 },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_PlanterSmall" />
       <Property name="NameHash" value="0" />
@@ -1292,19 +1299,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_BATTERYS_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene7",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_BATTERYS_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene7", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndFloor_1" />
       <Property name="NameHash" value="0" />
@@ -1364,19 +1372,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},			
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_BIOGENERATOR_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene9",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_BIOGENERATOR_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene9", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndFloor_1" />
       <Property name="NameHash" value="0" />
@@ -1436,19 +1445,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_SOLARPANELS_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene5",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_SOLARPANELS_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene5", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndFloor_1" />
       <Property name="NameHash" value="0" />
@@ -1508,19 +1518,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULES_SNAPSCENE.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "SnapSceneData",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULES_SNAPSCENE.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "SnapSceneData", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPointIndustrialLarge_N" />
       <Property name="NameHash" value="0" />
@@ -1910,19 +1921,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},				
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\CREATUREHARVESTER_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene5",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\CREATUREHARVESTER_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene5", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndLargeFloor_1" />
       <Property name="NameHash" value="0" />
@@ -1982,19 +1994,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\CREATUREFOODMAKER_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\CREATUREFOODMAKER_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndFloor_1" />
       <Property name="NameHash" value="0" />
@@ -2054,19 +2067,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_GASEXTRACTOR_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "Pipeline_Connection288288",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_GASEXTRACTOR_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "Pipeline_Connection288288", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndLargeFloor_1" />
       <Property name="NameHash" value="0" />
@@ -2126,19 +2140,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_PUMPS_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "Pipeline_Connection",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_PUMPS_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "Pipeline_Connection", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndLargeFloor_1" />
       <Property name="NameHash" value="0" />
@@ -2198,19 +2213,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},		
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_GENERATORS_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefSnapScene7",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_GENERATORS_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefSnapScene7", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndLargeFloor_1" />
       <Property name="NameHash" value="0" />
@@ -2270,19 +2286,20 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},	
-				{
-					["MBIN_FILE_SOURCE"] = "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_SILOS_PLACEMENT.SCENE.MBIN",
-					["EXML_CHANGE_TABLE"] = 
-					{
-						{
-							["SPECIAL_KEY_WORDS"] = {"Name", "RefPipelineConnection3",},
-							["ADD_OPTION"] = "ADDafterSECTION",
-							["AUTO_GNH"] = "TRUE",
-							["ADD"] = 
-[[
+            }
+          }
+        },
+        {
+          ["MBIN_FILE_SOURCE"] =
+          "MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\UTILITYPARTS\MODULE_SILOS_PLACEMENT.SCENE.MBIN",
+          ["EXML_CHANGE_TABLE"] =
+          {
+            {
+              ["SPECIAL_KEY_WORDS"] = { "Name", "RefPipelineConnection3", },
+              ["ADD_OPTION"] = "ADDafterSECTION",
+              ["AUTO_GNH"] = "TRUE",
+              ["ADD"] =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="SnapPoint_IndLargeFloor_1" />
       <Property name="NameHash" value="0" />
@@ -2342,10 +2359,10 @@ NMS_MOD_DEFINITION_CONTAINER =
       </Property>
     </Property>
 ]]
-						}
-					}	
-				},	
-			}			
-		}
-	}
+            }
+          }
+        },
+      }
+    }
+  }
 }

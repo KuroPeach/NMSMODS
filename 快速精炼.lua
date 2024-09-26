@@ -24,7 +24,7 @@ NMS_MOD_DEFINITION_CONTAINER = {
 							["VALUE_MATCH"] = "",
 							["VALUE_CHANGE_TABLE"] = {
 								{ "TimeToMake", REFINER_TIME_FACTOR },
-								{ "Amount", REFINER_AMMOUNT_FACTOR },
+								{ "Amount",     REFINER_AMMOUNT_FACTOR },
 							},
 						},
 					}, -- 3652 global replacements

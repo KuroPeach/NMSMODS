@@ -1,43 +1,43 @@
 PULSE_SPEED_DEFINED          = 2 -- Define your pulse speed on this line by changing the number one immediately after the equals symbol (=)
-POWER = 5
+POWER                        = 5
 
-NMS_MOD_DEFINITION_CONTAINER = 
+NMS_MOD_DEFINITION_CONTAINER =
 {
-["MOD_FILENAME"]             = "AtmoReverse-PulseSpeedDefined.pak",
-["MOD_AUTHOR"]               = "BigEx20 AKA Chromos",
-["MOD_DESCRIPTION"]          = "This mod allows hovering at 0u/s in the atmosphere and also brings quality-of-life adjustments to pulse engine speed defined by you via this .lua script.",
-["NMS_VERSION"]              = "5.12",
-["MODIFICATIONS"]            = 
+	["MOD_FILENAME"]    = "AtmoReverse-PulseSpeedDefined.pak",
+	["MOD_AUTHOR"]      = "BigEx20 AKA Chromos",
+	["MOD_DESCRIPTION"] = "This mod allows hovering at 0u/s in the atmosphere and also brings quality-of-life adjustments to pulse engine speed defined by you via this .lua script.",
+	["NMS_VERSION"]     = "5.12",
+	["MODIFICATIONS"]   =
 	{
 		{
-			["MBIN_CHANGE_TABLE"] 	= 
+			["MBIN_CHANGE_TABLE"] =
 			{
 				{
-					["MBIN_FILE_SOURCE"] 	= "GCSPACESHIPGLOBALS.GLOBAL.MBIN",
-					["EXML_CHANGE_TABLE"] 	= 
+					["MBIN_FILE_SOURCE"]  = "GCSPACESHIPGLOBALS.GLOBAL.MBIN",
+					["EXML_CHANGE_TABLE"] =
 					{
 						{
-							["PRECEDING_KEY_WORDS"] = {"PlanetEngine"},
-							["REPLACE_TYPE"] = "ALL",
-							["VALUE_CHANGE_TABLE"] 	= 
+							["PRECEDING_KEY_WORDS"] = { "PlanetEngine" },
+							["REPLACE_TYPE"]        = "ALL",
+							["VALUE_CHANGE_TABLE"]  =
 							{
-								{"MinSpeed", "1" },                                  -- Original 20
+								{ "MinSpeed", "1" }, -- Original 20
 							}
 						},
 						{
-							["PRECEDING_KEY_WORDS"] = {{"PlanetEngine"} , {"SpaceEngine"}},
-							["REPLACE_TYPE"] = "ALL",
+							["PRECEDING_KEY_WORDS"] = { { "PlanetEngine" }, { "SpaceEngine" } },
+							["REPLACE_TYPE"]        = "ALL",
 							["MATH_OPERATION"]      = "*",
-							["VALUE_CHANGE_TABLE"] 	= 
+							["VALUE_CHANGE_TABLE"]  =
 							{
-								{"BoostMaxSpeed", POWER },                                  -- Original 165
+								{ "BoostMaxSpeed", POWER }, -- Original 165
 							}
 						},
 						{
-							["MATH_OPERATION"]      = "*",
-							["VALUE_CHANGE_TABLE"] 	= 
+							["MATH_OPERATION"]     = "*",
+							["VALUE_CHANGE_TABLE"] =
 							{
-								{"MiniWarpSpeed", PULSE_SPEED_DEFINED }                      -- Scoll to top to change
+								{ "MiniWarpSpeed", PULSE_SPEED_DEFINED } -- Scoll to top to change
 							}
 						}
 					}

@@ -3,23 +3,23 @@ Author = "Jackty89"
 
 SpeedMultiplier = "1"
 
-InputSpeedMultiplier = {SpeedMultiplier,
-[[
+InputSpeedMultiplier = { SpeedMultiplier,
+    [[
     Would you like to modify the multiplier?
     Default = 1 | Current = >> ]] .. (SpeedMultiplier) .. [[ <<
-]]}
+]] }
 
 SpeedMultiplier = GUIF(InputSpeedMultiplier, 10)
 GroundWalkSpeed = "4.4" --these are their actual values
-GroundRunSpeed = "8" --these are their actual values
+GroundRunSpeed = "8"    --these are their actual values
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
-    ["MOD_FILENAME"] = ModeName .. ".pak",
+    ["MOD_FILENAME"]    = ModeName .. ".pak",
     ["MOD_DESCRIPTION"] = ModeName,
-    ["MOD_AUTHOR"] = Author,
-    ["NMS_VERSION"]   = "5.12",
-    ["MODIFICATIONS"] =
+    ["MOD_AUTHOR"]      = Author,
+    ["NMS_VERSION"]     = "5.12",
+    ["MODIFICATIONS"]   =
     {
         {
             ["MBIN_CHANGE_TABLE"] =
@@ -31,8 +31,8 @@ NMS_MOD_DEFINITION_CONTAINER =
                         {
                             ["VALUE_CHANGE_TABLE"] =
                             {
-                                {"GroundWalkSpeedLowG", (GroundWalkSpeed * SpeedMultiplier)},
-                                {"GroundRunSpeedLowG",  ( GroundRunSpeed * SpeedMultiplier)}
+                                { "GroundWalkSpeedLowG", (GroundWalkSpeed * SpeedMultiplier) },
+                                { "GroundRunSpeedLowG",  (GroundRunSpeed * SpeedMultiplier) }
                             }
                         }
                     }

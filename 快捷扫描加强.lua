@@ -16,11 +16,11 @@ Auto Scan planet entities (objects, structures) within given range.
 
 ------------------------------------------------------------------------------------------
 
-local _ScanRange = 100000   --max based on lod? range ~2,100u
-local _ScanTime  = 10
-local _RangeMult = 1
-local _ShowRange = 10000
-local _Override  = 100     --hide when this close
+local _ScanRange  = 100000 --max based on lod? range ~2,100u
+local _ScanTime   = 10
+local _RangeMult  = 1
+local _ShowRange  = 10000
+local _Override   = 100 --hide when this close
 
 ------------------------------------------------------------------------------------------
 -- Create Scannable Component Data
@@ -30,28 +30,28 @@ function CreateScannableComponentData(ScanRange, ScanName, ScanTime, RangeMult, 
     local result = [[
     <Property value="LinkableNMSTemplate.xml">
       <Property name="Template" value="GcScannableComponentData.xml">
-        <Property name="ScanRange" value="]]..ScanRange..[[" />
-        <Property name="ScanName" value="]]..ScanName..[[" />
-        <Property name="ScanTime" value="]]..ScanTime..[[" />
-        <Property name="CompassRangeMultiplier" value="]]..RangeMult..[[" />
-        <Property name="AlwaysShowRange" value="]]..ShowRange..[[" />
+        <Property name="ScanRange" value="]] .. ScanRange .. [[" />
+        <Property name="ScanName" value="]] .. ScanName .. [[" />
+        <Property name="ScanTime" value="]] .. ScanTime .. [[" />
+        <Property name="CompassRangeMultiplier" value="]] .. RangeMult .. [[" />
+        <Property name="AlwaysShowRange" value="]] .. ShowRange .. [[" />
         <Property name="CanTagIcon" value="True" />
         <Property name="ClearTagOnArrival" value="True" />
         <Property name="DisableIfBuildingPart" value="True" />
         <Property name="DisableIfInBase" value="True" />
         <Property name="UseModelNode" value="True" />
         <Property name="Icon" value="GcScannerIconTypes.xml">
-          <Property name="ScanIconType" value="]]..DisplayIcon..[[" />
+          <Property name="ScanIconType" value="]] .. DisplayIcon .. [[" />
         </Property>
         <Property name="ScannableType" value="Marker" />
         <Property name="IsPlacedMarker" value="False" />
         <Property name="ShowInFreighterBranchRoom" value="False" />
         <Property name="TellPlayerIfFreighterObjectUsed" value="False" />
         <Property name="FreighterObjectAlreadyUsedLocID" value="UI_ABAND_LOG_READ" />
-        <Property name="AllowedToMerge" value="]]..AllowMerge..[[" />
+        <Property name="AllowedToMerge" value="]] .. AllowMerge .. [[" />
         <Property name="MarkerActiveWithNodeInactive" value="True" />
         <Property name="MissionSurveyId" value="" />
-        <Property name="MinDisplayDistanceOverride" value="]].._Override..[[" />
+        <Property name="MinDisplayDistanceOverride" value="]] .. _Override .. [[" />
       </Property>
       <Property name="Linked" value="" />
     </Property>]]
@@ -65,49 +65,75 @@ end
 --      related sections further in the script, otherwise you will encounter compile errors!
 
 --BUILDING                                                 SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddAbandoned   = CreateScannableComponentData(_ScanRange, "BUILDING_ABANDONED_L",        _ScanTime, _RangeMult, _ShowRange, "HazardEgg",          "True") --BUILDING_ABANDONED_L
-AddBase        = CreateScannableComponentData(_ScanRange, "UI_RECOVER_BASE_MARKER",      _ScanTime, _RangeMult, _ShowRange, "Shield",            "False")
+AddAbandoned   = CreateScannableComponentData(_ScanRange, "BUILDING_ABANDONED_L", _ScanTime, _RangeMult, _ShowRange,
+    "HazardEgg", "True")                                                                                                                                  --BUILDING_ABANDONED_L
+AddBase        = CreateScannableComponentData(_ScanRange, "UI_RECOVER_BASE_MARKER", _ScanTime, _RangeMult, _ShowRange,
+    "Shield", "False")
 --AddBones       = CreateScannableComponentData(_ScanRange, "UI_UNDERGROUND_BONES_NAME_L", _ScanTime, _RangeMult, _ShowRange, "BuriedRare",         "True")
-AddDepot       = CreateScannableComponentData(_ScanRange, "SIGNAL_DEPOT",                _ScanTime, _RangeMult, _ShowRange, "Drone",              "True")
-AddDistress    = CreateScannableComponentData(_ScanRange, "BUILDING_DISTRESSSIGNAL_L",   _ScanTime, _RangeMult, _ShowRange, "HazardPlant",       "False")
-AddFactory     = CreateScannableComponentData(_ScanRange, "BUILDING_FACTORY_L",          _ScanTime, _RangeMult, _ShowRange, "Drone",              "True") --BUILDING_FACTORY_L
-AddFreighter   = CreateScannableComponentData(_ScanRange, "BUILDING_FREIGHTER_ALT",      _ScanTime, _RangeMult, _ShowRange, "HazardPlant",       "False")
-AddGrave       = CreateScannableComponentData(_ScanRange, "BUILDING_GRAVEINCAVE",        _ScanTime, _RangeMult, _ShowRange, "Grave",             "False")
-AddMessage     = CreateScannableComponentData(_ScanRange, "BLD_MESSAGEMODULE_NAME_L",    _ScanTime, _RangeMult, _ShowRange, "Grave",             "False")
-AddMonolith    = CreateScannableComponentData(_ScanRange, "BUILDING_MONOLITH_L",         _ScanTime, _RangeMult, _ShowRange, "Artifact",          "False") --BUILDING_MONOLITH_L
-AddObserver    = CreateScannableComponentData(_ScanRange, "BUILDING_OBSERVATORY_L",      _ScanTime, _RangeMult, _ShowRange, "SignalBooster",      "True") --BUILDING_OBSERVATORY_L
-AddOutpost     = CreateScannableComponentData(_ScanRange, "BUILDING_OUTPOST_L",          _ScanTime, _RangeMult, _ShowRange, "FreighterDoor",      "True") --BUILDING_OUTPOST_L
-AddPSettlement = CreateScannableComponentData(_ScanRange, "UI_SETTLEMENT_LOCATED_OSD",   _ScanTime, _RangeMult, _ShowRange, "HazardPlant",       "False") --UI_SETTLEMENT_LOCATED_OSD
-AddPortal      = CreateScannableComponentData(_ScanRange, "BUILDING_PORTAL_L",           _ScanTime, _RangeMult, _ShowRange, "Artifact",          "False") --BUILDING_PORTAL_L
-AddRadioTower  = CreateScannableComponentData(_ScanRange, "BUILDING_RADIOTOWER_L",       _ScanTime, _RangeMult, _ShowRange, "SignalBooster",      "True") --BUILDING_RADIOTOWER_L
-AddRuin        = CreateScannableComponentData(_ScanRange, "UI_SIGNAL_TREASURERUIN",      _ScanTime, _RangeMult, _ShowRange, "Artifact",           "True")
-AddTreasure    = CreateScannableComponentData(_ScanRange, "PLANT_FOOD_38",               _ScanTime, _RangeMult, _ShowRange, "ArtifactCrate",      "True")
-AddSentinelH   = CreateScannableComponentData(_ScanRange, "UI_MP_HIVE_LABEL",            _ScanTime, _RangeMult, _ShowRange, "Drone",              "True")
-AddSentinelD   = CreateScannableComponentData(_ScanRange, "UI_MP_HIVE_LABEL",            _ScanTime, _RangeMult, _ShowRange, "FriendlyDrone",      "True")
-AddMinorSettle = CreateScannableComponentData(_ScanRange, "BUILDING_SHOP_L",             _ScanTime, _RangeMult, _ShowRange, "Hazard",            "False")
-AddTerminal    = CreateScannableComponentData(_ScanRange, "SIGNAL_TERMINAL",             _ScanTime, _RangeMult, _ShowRange, "FreighterTerminal", "False")
+AddDepot       = CreateScannableComponentData(_ScanRange, "SIGNAL_DEPOT", _ScanTime, _RangeMult, _ShowRange, "Drone",
+    "True")
+AddDistress    = CreateScannableComponentData(_ScanRange, "BUILDING_DISTRESSSIGNAL_L", _ScanTime, _RangeMult, _ShowRange,
+    "HazardPlant", "False")
+AddFactory     = CreateScannableComponentData(_ScanRange, "BUILDING_FACTORY_L", _ScanTime, _RangeMult, _ShowRange,
+    "Drone", "True")                                                                                                                                      --BUILDING_FACTORY_L
+AddFreighter   = CreateScannableComponentData(_ScanRange, "BUILDING_FREIGHTER_ALT", _ScanTime, _RangeMult, _ShowRange,
+    "HazardPlant", "False")
+AddGrave       = CreateScannableComponentData(_ScanRange, "BUILDING_GRAVEINCAVE", _ScanTime, _RangeMult, _ShowRange,
+    "Grave", "False")
+AddMessage     = CreateScannableComponentData(_ScanRange, "BLD_MESSAGEMODULE_NAME_L", _ScanTime, _RangeMult, _ShowRange,
+    "Grave", "False")
+AddMonolith    = CreateScannableComponentData(_ScanRange, "BUILDING_MONOLITH_L", _ScanTime, _RangeMult, _ShowRange,
+    "Artifact", "False")                                                                                                                                  --BUILDING_MONOLITH_L
+AddObserver    = CreateScannableComponentData(_ScanRange, "BUILDING_OBSERVATORY_L", _ScanTime, _RangeMult, _ShowRange,
+    "SignalBooster", "True")                                                                                                                              --BUILDING_OBSERVATORY_L
+AddOutpost     = CreateScannableComponentData(_ScanRange, "BUILDING_OUTPOST_L", _ScanTime, _RangeMult, _ShowRange,
+    "FreighterDoor", "True")                                                                                                                              --BUILDING_OUTPOST_L
+AddPSettlement = CreateScannableComponentData(_ScanRange, "UI_SETTLEMENT_LOCATED_OSD", _ScanTime, _RangeMult, _ShowRange,
+    "HazardPlant", "False")                                                                                                                               --UI_SETTLEMENT_LOCATED_OSD
+AddPortal      = CreateScannableComponentData(_ScanRange, "BUILDING_PORTAL_L", _ScanTime, _RangeMult, _ShowRange,
+    "Artifact", "False")                                                                                                                                  --BUILDING_PORTAL_L
+AddRadioTower  = CreateScannableComponentData(_ScanRange, "BUILDING_RADIOTOWER_L", _ScanTime, _RangeMult, _ShowRange,
+    "SignalBooster", "True")                                                                                                                              --BUILDING_RADIOTOWER_L
+AddRuin        = CreateScannableComponentData(_ScanRange, "UI_SIGNAL_TREASURERUIN", _ScanTime, _RangeMult, _ShowRange,
+    "Artifact", "True")
+AddTreasure    = CreateScannableComponentData(_ScanRange, "PLANT_FOOD_38", _ScanTime, _RangeMult, _ShowRange,
+    "ArtifactCrate", "True")
+AddSentinelH   = CreateScannableComponentData(_ScanRange, "UI_MP_HIVE_LABEL", _ScanTime, _RangeMult, _ShowRange, "Drone",
+    "True")
+AddSentinelD   = CreateScannableComponentData(_ScanRange, "UI_MP_HIVE_LABEL", _ScanTime, _RangeMult, _ShowRange,
+    "FriendlyDrone", "True")
+AddMinorSettle = CreateScannableComponentData(_ScanRange, "BUILDING_SHOP_L", _ScanTime, _RangeMult, _ShowRange, "Hazard",
+    "False")
+AddTerminal    = CreateScannableComponentData(_ScanRange, "SIGNAL_TERMINAL", _ScanTime, _RangeMult, _ShowRange,
+    "FreighterTerminal", "False")
 
 
 --FLORA TEST                                               SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddRunawayMold = CreateScannableComponentData(_ScanRange, "UI_WEIRD_BALL_NAME_L",        _ScanTime, _RangeMult, _ShowRange, "Rare3",             "True")
+AddRunawayMold               = CreateScannableComponentData(_ScanRange, "UI_WEIRD_BALL_NAME_L", _ScanTime, _RangeMult,
+    _ShowRange, "Rare3", "True")
 
 --ROBOTS TEST                                              SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddSentinCrash = CreateScannableComponentData(_ScanRange, "UI_SENTINEL_CRASH_MARKER",    _ScanTime, _RangeMult, _ShowRange, "Drone",              "True") --Changed to correct tip (SIGNAL/SCAN TYPE)
+AddSentinCrash               = CreateScannableComponentData(_ScanRange, "UI_SENTINEL_CRASH_MARKER", _ScanTime, _RangeMult,
+    _ShowRange, "Drone", "True")                                                                                                                          --Changed to correct tip (SIGNAL/SCAN TYPE)
 
 --STORY GLITCH TEST                                        SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddStoryGlitch = CreateScannableComponentData(_ScanRange, "Alien Anomaly Detected",      _ScanTime, _RangeMult, _ShowRange, "Artifact",          "False")
+AddStoryGlitch               = CreateScannableComponentData(_ScanRange, "Alien Anomaly Detected", _ScanTime, _RangeMult,
+    _ShowRange, "Artifact", "False")
 
 --DROP POD TEST - Spectrus1702                             SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddDropPod     = CreateScannableComponentData(_ScanRange, "BUILDING_DAMAGEDMACHINE_L",   _ScanTime, _RangeMult, _ShowRange, "Tech",              "False")
+AddDropPod                   = CreateScannableComponentData(_ScanRange, "BUILDING_DAMAGEDMACHINE_L", _ScanTime,
+    _RangeMult, _ShowRange, "Tech", "False")
 
 --CORRUPTED PILLAR TEST - Spectrus1702                     SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddPillar      = CreateScannableComponentData(_ScanRange, "UI_MINIHIVE_CORRUPT_NAME",    _ScanTime, _RangeMult, _ShowRange, "CorruptedMachine",  "False")
+AddPillar                    = CreateScannableComponentData(_ScanRange, "UI_MINIHIVE_CORRUPT_NAME", _ScanTime, _RangeMult,
+    _ShowRange, "CorruptedMachine", "False")
 
 --ROBOT CAMP TEST - Spectrus1702                           SIGNAL/SCAN TYPE               SCANTIME   RANGEMULT   SHOWRANGE   ICON            ALLOW MERGE
-AddCamp        = CreateScannableComponentData(_ScanRange, "UI_ROBOT_CAMP_TERMINAL_NAME", _ScanTime, _RangeMult, _ShowRange, "RobotHead",         "False")
+AddCamp                      = CreateScannableComponentData(_ScanRange, "UI_ROBOT_CAMP_TERMINAL_NAME", _ScanTime,
+    _RangeMult, _ShowRange, "RobotHead", "False")
 
-DistressSound =
-[[
+DistressSound                =
+    [[
     <Property value="LinkableNMSTemplate.xml">
       <Property name="Template" value="GcAudioAreaTriggerComponentData.xml">
         <Property name="EventEnter" value="GcAudioWwiseEvents.xml">
@@ -116,8 +142,8 @@ DistressSound =
         <Property name="EventExit" value="GcAudioWwiseEvents.xml">
           <Property name="AkEvent" value="INVALID_EVENT" />
         </Property>
-        <Property name="EnterDistance" value="]].._ShowRange..[[" />
-        <Property name="ExitDistance" value="]].._ShowRange..[[" />
+        <Property name="EnterDistance" value="]] .. _ShowRange .. [[" />
+        <Property name="ExitDistance" value="]] .. _ShowRange .. [[" />
       </Property>
       <Property name="Linked" value="" />
     </Property>
@@ -125,170 +151,179 @@ DistressSound =
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
-    ["MOD_FILENAME"]            = string.format("_%s%s.pak", modfilename, "v"..lua_version),
-    ["LUA_AUTHOR"]              = lua_author,
-    ["MOD_AUTHOR"]              = mod_author,
-    ["NMS_VERSION"]             = nms_version,
-    ["CONTRIBUTOR"]             = contributor,
-    ["MOD_DESCRIPTION"]         = description,
-    ["MOD_MAINTENANCE"]         = maintenance,
-    ["MODIFICATIONS"]           =
+    ["MOD_FILENAME"]    = string.format("_%s%s.pak", modfilename, "v" .. lua_version),
+    ["LUA_AUTHOR"]      = lua_author,
+    ["MOD_AUTHOR"]      = mod_author,
+    ["NMS_VERSION"]     = nms_version,
+    ["CONTRIBUTOR"]     = contributor,
+    ["MOD_DESCRIPTION"] = description,
+    ["MOD_MAINTENANCE"] = maintenance,
+    ["MODIFICATIONS"]   =
     {
         {
             ["MBIN_CHANGE_TABLE"] =
             {
-                    ----------------------------------------------------------------------------------------------
-                    --SENTINEL CRASH SCENE
-                    ----------------------------------------------------------------------------------------------
-               {
-                   ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DISTRESSSIGNAL\SENTINELCRASHSCENE\ENTITIES\DATA.ENTITY.MBIN]],
-                   ["EXML_CHANGE_TABLE"] =
-                   {
-                       {
-                           ["REPLACE_TYPE"]        = "RAW",
-                           ["VALUE_CHANGE_TABLE"]  =
-                           {
-                               {[[<Property name="Components" />]], [[<Property name="Components">]]},
-                           }
-                       },
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"Components"},
-                           ["ADD"]                 = AddSentinCrash,
-                       },
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"LinkableNMSTemplate.xml"},
-                           ["ADD_OPTION"]          = "ADDendSECTION",
-                           ["ADD"]                 = [[</Property>]],
-                       },
-                   }
-               },
-                    ----------------------------------------------------------------------------------------------
-                    --RUNAWAY MOLD - Already has GcScannableComponentData, we're overriding for AllowMerge
-                    ----------------------------------------------------------------------------------------------
-               {
-                   ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\INTERACTIVEFLORA\ROLLINGPLANT\ENTITIES\ROLLINGPROP.ENTITY.MBIN]],
-                   ["EXML_CHANGE_TABLE"] =
-                   {
-                       {
-                           ["SPECIAL_KEY_WORDS"]   = {"Template", "GcScannableComponentData.xml"},
-                           ["SECTION_UP_SPECIAL"]  = 1,
-                           ["REMOVE"]              = "SECTION",
-                       },
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
-                           ["ADD_OPTION"]          = "ADDbeforeSECTION",
-                           ["ADD"]                 = AddRunawayMold,
-                       },
-                   }
-               },
-                    ----------------------------------------------------------------------------------------------
-                    --TRAVELLER GRAVE - Already has GcScannableComponentData, we're overriding for AllowMerge
-                    ----------------------------------------------------------------------------------------------
-               {
-                   ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\GRAVEINCAVE\GRAVEINCAVE\ENTITIES\GRAVEINCAVE.ENTITY.MBIN]],
-                   ["EXML_CHANGE_TABLE"] =
-                   {
-                       {
-                           ["SPECIAL_KEY_WORDS"]   = {"Template", "GcScannableComponentData.xml"},
-                           ["SECTION_UP_SPECIAL"]  = 1,
-                           ["REMOVE"]              = "SECTION",
-                       },
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
-                           ["ADD_OPTION"]          = "ADDafterSECTION",
-                           ["ADD"]                 = AddGrave,
-                       },
-                   }
-               },
-                    ----------------------------------------------------------------------------------------------
-                    --DISSONANCE RESONATOR - Already has GcScannableComponentData, we're overriding for AllowMerge
-                    ----------------------------------------------------------------------------------------------
-               {
-                   ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\RARERESOURCE\GROUND\CORRUPTDRONEPILLAR\ENTITIES\DATA.ENTITY.MBIN]],
-                   ["EXML_CHANGE_TABLE"] =
-                   {
-                       {
-                           ["SPECIAL_KEY_WORDS"]   = {"Template", "GcScannableComponentData.xml"},
-                           ["SECTION_UP_SPECIAL"]  = 1,
-                           ["REMOVE"]              = "SECTION",
-                       },
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
-                           ["ADD_OPTION"]          = "ADDafterSECTION",
-                           ["ADD"]                 = AddPillar,
-                       },
-                   }
-               },
-                    ----------------------------------------------------------------------------------------------
-                    --DROP PODS - Spectrus1702
-                    ----------------------------------------------------------------------------------------------
-               {
-                   ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DAMAGEDMACHINERY\DAMAGEDMACHINERY_POD\ENTITIES\DAMAGEDMACHINERY_POD.ENTITY.MBIN]],
-                   ["EXML_CHANGE_TABLE"] =
-                   {
-                       {
-                           ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
-                           ["ADD_OPTION"]          = "ADDafterSECTION",
-                           ["ADD"]                 = AddDropPod,
-                       },
-                   }
-               },
-                    ----------------------------------------------------------------------------------------------
-                    --MESSAGE MODULE
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --SENTINEL CRASH SCENE
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\MESSAGEMODULE\ENTITIES\MESSAGEMODULE.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DISTRESSSIGNAL\SENTINELCRASHSCENE\ENTITIES\DATA.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["REPLACE_TYPE"]       = "RAW",
+                            ["VALUE_CHANGE_TABLE"] =
+                            {
+                                { [[<Property name="Components" />]], [[<Property name="Components">]] },
+                            }
+                        },
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components" },
+                            ["ADD"]                 = AddSentinCrash,
+                        },
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "LinkableNMSTemplate.xml" },
+                            ["ADD_OPTION"]          = "ADDendSECTION",
+                            ["ADD"]                 = [[</Property>]],
+                        },
+                    }
+                },
+                ----------------------------------------------------------------------------------------------
+                --RUNAWAY MOLD - Already has GcScannableComponentData, we're overriding for AllowMerge
+                ----------------------------------------------------------------------------------------------
+                {
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\INTERACTIVEFLORA\ROLLINGPLANT\ENTITIES\ROLLINGPROP.ENTITY.MBIN]],
+                    ["EXML_CHANGE_TABLE"] =
+                    {
+                        {
+                            ["SPECIAL_KEY_WORDS"]  = { "Template", "GcScannableComponentData.xml" },
+                            ["SECTION_UP_SPECIAL"] = 1,
+                            ["REMOVE"]             = "SECTION",
+                        },
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
+                            ["ADD_OPTION"]          = "ADDbeforeSECTION",
+                            ["ADD"]                 = AddRunawayMold,
+                        },
+                    }
+                },
+                ----------------------------------------------------------------------------------------------
+                --TRAVELLER GRAVE - Already has GcScannableComponentData, we're overriding for AllowMerge
+                ----------------------------------------------------------------------------------------------
+                {
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\GRAVEINCAVE\GRAVEINCAVE\ENTITIES\GRAVEINCAVE.ENTITY.MBIN]],
+                    ["EXML_CHANGE_TABLE"] =
+                    {
+                        {
+                            ["SPECIAL_KEY_WORDS"]  = { "Template", "GcScannableComponentData.xml" },
+                            ["SECTION_UP_SPECIAL"] = 1,
+                            ["REMOVE"]             = "SECTION",
+                        },
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
+                            ["ADD_OPTION"]          = "ADDafterSECTION",
+                            ["ADD"]                 = AddGrave,
+                        },
+                    }
+                },
+                ----------------------------------------------------------------------------------------------
+                --DISSONANCE RESONATOR - Already has GcScannableComponentData, we're overriding for AllowMerge
+                ----------------------------------------------------------------------------------------------
+                {
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\RARERESOURCE\GROUND\CORRUPTDRONEPILLAR\ENTITIES\DATA.ENTITY.MBIN]],
+                    ["EXML_CHANGE_TABLE"] =
+                    {
+                        {
+                            ["SPECIAL_KEY_WORDS"]  = { "Template", "GcScannableComponentData.xml" },
+                            ["SECTION_UP_SPECIAL"] = 1,
+                            ["REMOVE"]             = "SECTION",
+                        },
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
+                            ["ADD_OPTION"]          = "ADDafterSECTION",
+                            ["ADD"]                 = AddPillar,
+                        },
+                    }
+                },
+                ----------------------------------------------------------------------------------------------
+                --DROP PODS - Spectrus1702
+                ----------------------------------------------------------------------------------------------
+                {
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DAMAGEDMACHINERY\DAMAGEDMACHINERY_POD\ENTITIES\DAMAGEDMACHINERY_POD.ENTITY.MBIN]],
+                    ["EXML_CHANGE_TABLE"] =
+                    {
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
+                            ["ADD_OPTION"]          = "ADDafterSECTION",
+                            ["ADD"]                 = AddDropPod,
+                        },
+                    }
+                },
+                ----------------------------------------------------------------------------------------------
+                --MESSAGE MODULE
+                ----------------------------------------------------------------------------------------------
+                {
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\TECH\MESSAGEMODULE\ENTITIES\MESSAGEMODULE.ENTITY.MBIN]],
+                    ["EXML_CHANGE_TABLE"] =
+                    {
+                        {
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddMessage,
                         },
                     },
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --STORY GLITCH (ANOMOLY RINGS)
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --STORY GLITCH (ANOMOLY RINGS)
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\BUILDINGSIZEDPROPS\ALIENRING\ENTITIES\ALIENRING.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\BUILDINGSIZEDPROPS\ALIENRING\ENTITIES\ALIENRING.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddStoryGlitch,
                         },
                     },
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --BASE SITE (WILD)
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --BASE SITE (WILD)
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASECOMPUTER\ENTITIES\BASECOMPUTER.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\BASECOMPUTER\ENTITIES\BASECOMPUTER.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddBase,
                         },
                     },
                 },
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\DEFAULTROOM\ENTITIES\DEFAULTROOM.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\BUILDABLEPARTS\DEFAULTROOM\ENTITIES\DEFAULTROOM.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddBase,
                         },
                     },
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --TRADE OUTPOST
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --TRADE OUTPOST
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -297,15 +332,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddOutpost,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --MINOR SETTLEMENT
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --MINOR SETTLEMENT
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -314,15 +349,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddMinorSettle,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --PLANETARY SETTLEMENT
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --PLANETARY SETTLEMENT
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -332,29 +367,30 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddPSettlement,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --DISTRESS SIGNAL
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --DISTRESS SIGNAL
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DISTRESSSIGNAL\PARTS\BLACKBOX\ENTITIES\BLACKBOX.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\DISTRESSSIGNAL\PARTS\BLACKBOX\ENTITIES\BLACKBOX.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
-                            ["ADD"]                 = AddDistress..DistressSound,
+                            ["ADD"]                 = AddDistress .. DistressSound,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --REMOTE TERMINAL
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --REMOTE TERMINAL
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -363,15 +399,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddTerminal,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --RADIOTOWER (Transmission Tower)
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --RADIOTOWER (Transmission Tower)
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -383,15 +419,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddRadioTower,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --MONOLITH SITES
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --MONOLITH SITES
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -402,65 +438,69 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddMonolith,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --PORTAL \ MONUMENT SITE
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --PORTAL \ MONUMENT SITE
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PORTAL\PORTAL\ENTITIES\PORTALSTRUCTURE.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PORTAL\PORTAL\ENTITIES\PORTALSTRUCTURE.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddPortal,
                         },
                     }
                 },
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PORTAL\PORTAL\ENTITIES\PORTAL.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PORTAL\PORTAL\ENTITIES\PORTAL.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddPortal,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --ANCIENT RUINS
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --ANCIENT RUINS
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\RUINS\PROCRUINS\ENTITIES\RUINS.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\RUINS\PROCRUINS\ENTITIES\RUINS.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddRuin,
                         },
                     }
                 },
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\RUINS\UNDERGROUNDRUINS\ENTITIES\TRIGGERVOLUME.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\RUINS\UNDERGROUNDRUINS\ENTITIES\TRIGGERVOLUME.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddTreasure,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --DEPOT SITES
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --DEPOT SITES
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -471,15 +511,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddDepot,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --FACTORY SITE
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --FACTORY SITE
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  =
                     {
@@ -490,15 +530,15 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddFactory,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --OBSERVATORY
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --OBSERVATORY
+                ----------------------------------------------------------------------------------------------
                 {
                     ["MBIN_FILE_SOURCE"]  = {
                         [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\OBSERVATORY\WARRIORPARTS\OBSERVATORYWARRIOR_ROOF\ENTITIES\RADAR.ENTITY.MBIN]],
@@ -507,7 +547,7 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddObserver,
                         },
@@ -522,76 +562,80 @@ NMS_MOD_DEFINITION_CONTAINER =
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddObserver,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --SENTINEL HIVE ACTIVE
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --SENTINEL HIVE ACTIVE
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\SENTINELHIVE\SENTINELHIVEDESTRUCTIBLE\ENTITIES\SENTINELHIVEDESTRUCTIBLE.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\SENTINELHIVE\SENTINELHIVEDESTRUCTIBLE\ENTITIES\SENTINELHIVEDESTRUCTIBLE.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddSentinelH,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --SENTINEL HIVE DISABLED
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --SENTINEL HIVE DISABLED
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\SENTINELHIVE\SENTINELHIVEDESTRUCTIBLE_DESTROYED\ENTITIES\DEBRIS.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\SENTINELHIVE\SENTINELHIVEDESTRUCTIBLE_DESTROYED\ENTITIES\DEBRIS.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddSentinelD,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --ABANDONED SITE
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --ABANDONED SITE
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\COMMONPARTS\ABANDONEDTERMINAL\ENTITIES\ABANDONEDTERMINAL.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\PARTS\COMMONPARTS\ABANDONEDTERMINAL\ENTITIES\ABANDONEDTERMINAL.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDbeforeSECTION",
                             ["ADD"]                 = AddAbandoned,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --ROBOT CAMP
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --ROBOT CAMP
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\COMMON\BUILDINGS\ROBOT\ROBOTBASE\ENTITIES\TERMINAL.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\COMMON\BUILDINGS\ROBOT\ROBOTBASE\ENTITIES\TERMINAL.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["SPECIAL_KEY_WORDS"]   = {"Template", "GcScannableComponentData.xml"},
-                            ["SECTION_UP_SPECIAL"]  = 1,
-                            ["REMOVE"]              = "SECTION",
+                            ["SPECIAL_KEY_WORDS"]  = { "Template", "GcScannableComponentData.xml" },
+                            ["SECTION_UP_SPECIAL"] = 1,
+                            ["REMOVE"]             = "SECTION",
                         },
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
                             ["ADD"]                 = AddCamp,
                         },
                     }
                 },
-                    ----------------------------------------------------------------------------------------------
-                    --RARE RESOURCE, Already has GcScannableComponentData, we're overriding for AllowMerge
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --RARE RESOURCE, Already has GcScannableComponentData, we're overriding for AllowMerge
+                ----------------------------------------------------------------------------------------------
                 --{
                 --    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\RARERESOURCE\GROUND\BONEPILE\ENTITIES\BONEPILE.ENTITY.MBIN]],
                 --    ["EXML_CHANGE_TABLE"] =
@@ -608,17 +652,18 @@ NMS_MOD_DEFINITION_CONTAINER =
                 --          }
                 --    },
                 --},
-                    ----------------------------------------------------------------------------------------------
-                    --CRASHED FREIGHTER
-                    ----------------------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------------------------
+                --CRASHED FREIGHTER
+                ----------------------------------------------------------------------------------------------
                 {
-                    ["MBIN_FILE_SOURCE"]  = [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\CRASHEDFREIGHTER\PARTS\CRASHEDFREIGHTER_DISTRESSSIGNAL\ENTITIES\CRASHEDFREIGHTER_DISTRESSSIGNAL.ENTITY.MBIN]],
+                    ["MBIN_FILE_SOURCE"]  =
+                    [[MODELS\PLANETS\BIOMES\COMMON\BUILDINGS\CRASHEDFREIGHTER\PARTS\CRASHEDFREIGHTER_DISTRESSSIGNAL\ENTITIES\CRASHEDFREIGHTER_DISTRESSSIGNAL.ENTITY.MBIN]],
                     ["EXML_CHANGE_TABLE"] =
                     {
                         {
-                            ["PRECEDING_KEY_WORDS"] = {"Components", "LinkableNMSTemplate.xml"},
+                            ["PRECEDING_KEY_WORDS"] = { "Components", "LinkableNMSTemplate.xml" },
                             ["ADD_OPTION"]          = "ADDafterSECTION",
-                            ["ADD"]                 = AddFreighter..DistressSound,
+                            ["ADD"]                 = AddFreighter .. DistressSound,
                         },
                     }
                 }

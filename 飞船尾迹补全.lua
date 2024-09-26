@@ -7,26 +7,26 @@ ModVersion = "a"
 
 NMS_MOD_DEFINITION_CONTAINER =
 {
-MOD_FILENAME	= ModName.." "..ModNameSub.." "..GameVersion..ModVersion..".pak",
-MOD_DESCRIPTION	= BaseDescription,
-MOD_AUTHOR		= Author,
-LUA_AUTHOR		= "Babscoole",
-NMS_VERSION		= GameVersion,
-GLOBAL_INTEGER_TO_FLOAT = "FORCE",
-MODIFICATIONS           =
+  MOD_FILENAME            = ModName .. " " .. ModNameSub .. " " .. GameVersion .. ModVersion .. ".pak",
+  MOD_DESCRIPTION         = BaseDescription,
+  MOD_AUTHOR              = Author,
+  LUA_AUTHOR              = "Babscoole",
+  NMS_VERSION             = GameVersion,
+  GLOBAL_INTEGER_TO_FLOAT = "FORCE",
+  MODIFICATIONS           =
+  {
     {
+      MBIN_CHANGE_TABLE =
+      {
         {
-            MBIN_CHANGE_TABLE =
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSA\THRUSTERSA_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
             {
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSA\THRUSTERSA_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -64,18 +64,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSA\THRUSTERSA_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSA\THRUSTERSA_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -113,18 +113,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -162,32 +162,32 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.802999"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.802999"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.802999" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_LEFT|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.802999" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -225,32 +225,32 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.802999"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.802999"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSC\THRUSTERSC_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.802999" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSB\THRUSTERSB_RIGHT|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.802999" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSC\THRUSTERSC_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -288,18 +288,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSC\THRUSTERSC_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSC\THRUSTERSC_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail" />
       <Property name="NameHash" value="1940499083" />
@@ -337,18 +337,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children","Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children", "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -368,32 +368,32 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "1.257733"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.991504"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children","Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "1.257733" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_L|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.991504" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children", "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -413,32 +413,32 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "1.257733"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.991504"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\COMBPOUNDENGINEFLAME.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "1.257733" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\DROPSHIPS\THRUSTERS\THRUSTERSD\THRUSTERSD_R|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.991504" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\COMBPOUNDENGINEFLAME.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail1" />
       <Property name="NameHash" value="4190444725" />
@@ -476,18 +476,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\COMBPOUNDENGINEFLAMER.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\COMBPOUNDENGINEFLAMER.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail1" />
       <Property name="NameHash" value="4190444725" />
@@ -525,18 +525,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_A\GOLDWINGS_A.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Stage2"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_A\GOLDWINGS_A.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Stage2" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="4236082237" />
@@ -574,18 +574,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_A\WINGS_A.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Stage2"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_A\WINGS_A.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Stage2" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="4236082237" />
@@ -623,18 +623,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_B\WINGSB.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Stage2"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_B\WINGSB.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Stage2" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="4236082237" />
@@ -708,18 +708,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_E\WINGSE.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Gun1Ref"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_E\WINGSE.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Gun1Ref" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail20" />
       <Property name="NameHash" value="4236082237" />
@@ -793,18 +793,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_F\WINGS_F.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_F\WINGS_F.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail22" />
       <Property name="NameHash" value="2315939793" />
@@ -842,12 +842,12 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Turbine"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Turbine" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail20" />
           <Property name="NameHash" value="4236082237" />
@@ -885,18 +885,18 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_G\WINGSG.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RefTurbineAR"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_G\WINGSG.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RefTurbineAR" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="4236082237" />
@@ -934,18 +934,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_H\WINGSH.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingAnimData"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_H\WINGSH.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "WingAnimData" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail20" />
       <Property name="NameHash" value="4236082237" />
@@ -983,18 +983,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_K\WINGSK.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children","Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\FIGHTERS\WINGS\WINGS_K\WINGSK.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children", "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail4" />
           <Property name="NameHash" value="2310006842" />
@@ -1032,13 +1032,13 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","_WingsK_B"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "_WingsK_B" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -1076,19 +1076,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SAILSHIP\SAILSHIP_PROC.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","AWingsL_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SAILSHIP\SAILSHIP_PROC.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "AWingsL_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail1" />
               <Property name="NameHash" value="4190444725" />
@@ -1108,13 +1108,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","AWingsR_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "AWingsR_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail" />
               <Property name="NameHash" value="1940499083" />
@@ -1134,13 +1134,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","BWingsL_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "BWingsL_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail3" />
               <Property name="NameHash" value="399211929" />
@@ -1160,13 +1160,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","BWingsR_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "BWingsR_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail2" />
               <Property name="NameHash" value="1624001807" />
@@ -1186,13 +1186,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","CWingsL_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "CWingsL_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail10" />
               <Property name="NameHash" value="1328110910" />
@@ -1248,13 +1248,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","CWingsR_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "CWingsR_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail4" />
               <Property name="NameHash" value="2310006842" />
@@ -1310,13 +1310,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","FWingsL_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "FWingsL_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail7" />
               <Property name="NameHash" value="279361920" />
@@ -1336,13 +1336,13 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","FWingsR_JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "FWingsR_JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail6" />
               <Property name="NameHash" value="1738639638" />
@@ -1362,18 +1362,18 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\COCKPIT\COCKPITA\BACK\COCKPITABACKB.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\COCKPIT\COCKPITA\BACK\COCKPITABACKB.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail2" />
       <Property name="NameHash" value="1624001807" />
@@ -1393,19 +1393,19 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\COCKPIT\COCKPITD\COCKPITD.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","CockpitDData"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\COCKPIT\COCKPITD\COCKPITD.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "CockpitDData" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail2" />
           <Property name="NameHash" value="1624001807" />
@@ -1461,19 +1461,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSC\SUBWINGSC_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingALeft"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSC\SUBWINGSC_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "WingALeft" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -1493,19 +1493,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSC\SUBWINGSC_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingARight"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSC\SUBWINGSC_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "WingARight" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -1525,19 +1525,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSD\SUBWINGSD_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","SubWingD"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSD\SUBWINGSD_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "SubWingD" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -1557,19 +1557,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSD\SUBWINGSD_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","SubWingD"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\SUBWINGS\SUBWINGSD\SUBWINGSD_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "SubWingD" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -1589,19 +1589,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSA\WINGSA_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingALeft"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSA\WINGSA_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "WingALeft" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -1639,19 +1639,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSA\WINGSA_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingALeft"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSA\WINGSA_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "WingALeft" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -1689,18 +1689,18 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSB\WINGSBLEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSB\WINGSBLEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Contrail3" />
       <Property name="NameHash" value="1928427471" />
@@ -1756,22 +1756,22 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Contrail2"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"TransX", "4.476562"},
-                                {"TransY", "-0.867432"},
-                                {"TransZ", "-3.521484"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Data"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Contrail2" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "TransX", "4.476562" },
+                { "TransY", "-0.867432" },
+                { "TransZ", "-3.521484" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "Data" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -1845,18 +1845,18 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSB\WINGSBRIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSB\WINGSBRIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Contrail3" />
       <Property name="NameHash" value="1928427471" />
@@ -1912,22 +1912,22 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Contrail2"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"TransX", "-4.476562"},
-                                {"TransY", "-0.867432"},
-                                {"TransZ", "-3.521484"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Data"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Contrail2" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "TransX", "-4.476562" },
+                { "TransY", "-0.867432" },
+                { "TransZ", "-3.521484" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "Data" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -2001,18 +2001,18 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSC\WINGCLEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSC\WINGCLEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2050,18 +2050,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSC\WINGCRIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSC\WINGCRIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2099,18 +2099,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSD\WINGDLEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSD\WINGDLEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2148,18 +2148,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSD\WINGDRIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSD\WINGDRIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2197,18 +2197,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSG\WINGGLEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSG\WINGGLEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Contrail3" />
       <Property name="NameHash" value="1928427471" />
@@ -2282,27 +2282,27 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Contrail2"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"TransX", "2.363281"},
-                                {"TransY", "-0.927734"},
-                                {"TransZ", "-0.991211"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSG\WINGGRIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Contrail2" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "TransX", "2.363281" },
+                { "TransY", "-0.927734" },
+                { "TransZ", "-0.991211" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSG\WINGGRIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Contrail3" />
       <Property name="NameHash" value="1928427471" />
@@ -2376,27 +2376,27 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Contrail2"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"TransX", "-2.363281"},
-                                {"TransY", "-0.927734"},
-                                {"TransZ", "-0.991211"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSK\WINGKLEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Contrail2" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "TransX", "-2.363281" },
+                { "TransY", "-0.927734" },
+                { "TransZ", "-0.991211" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSK\WINGKLEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2416,18 +2416,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSK\WINGKRIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSK\WINGKRIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2447,18 +2447,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSL\WINGSL_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSL\WINGSL_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2496,18 +2496,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSL\WINGSL_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGSL\WINGSL_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail5" />
       <Property name="NameHash" value="4272478380" />
@@ -2545,18 +2545,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="1328110910" />
@@ -2576,32 +2576,32 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.715366"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.769422"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.715366" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_LEFT|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.769422" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="1328110910" />
@@ -2621,33 +2621,33 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT|collisionCylinder1","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.769422"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT|collisionCylinder","Name","HEIGHT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.715366"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\ENGINE\ENGINE_C.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","EngineBase"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT|collisionCylinder1", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.769422" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MODELS\COMMON\SPACECRAFT\SCIENTIFIC\WINGS\WINGTOPJOINT\WINGTOPJOINT_RIGHT|collisionCylinder", "Name", "HEIGHT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.715366" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\ENGINE\ENGINE_C.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "EngineBase" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail5" />
           <Property name="NameHash" value="4272478380" />
@@ -2667,19 +2667,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\TOPWING\TOPWING_A.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","_TopWing_A"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\TOPWING\TOPWING_A.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "_TopWing_A" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -2699,19 +2699,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\TOPWING\TOPWING_B.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","_TopWing_B"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\TOPWING\TOPWING_B.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "_TopWing_B" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail9" />
           <Property name="NameHash" value="4145976455" />
@@ -2731,79 +2731,79 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MirrorMerged_X36","Name","MESHLINK"},
-                            ADD_OPTION  = "ADDafterSECTION",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "MirrorMerged_X36", "Name", "MESHLINK" },
+              ADD_OPTION        = "ADDafterSECTION",
+              ADD               =
+              [[
             <Property value="TkSceneNodeAttributeData.xml">
               <Property name="Name" value="ATTACHMENT" />
               <Property name="Value" value="MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\TOPWING\TOPWING_B\ENTITIES\.ENTITY.MBIN" />
             </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight1"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"RotX",   "-180"},
-                                {"RotY",   "11.474125"},
-                                {"RotZ",   "0"},
-                                {"ScaleZ", "10"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight1","Name","FOV"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "360.000000"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight1","Name","VOLUMETRIC"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.000000"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight2"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"RotX",   "180"},
-                                {"RotY",   "-11.474003"},
-                                {"RotZ",   "0"},
-                                {"ScaleX", "10"},
-                                {"ScaleY", "10"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight2","Name","FOV"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "360.000000"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","spotLight2","Name","VOLUMETRIC"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"Value", "0.000000"},
-                            }
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\WINGS\WINGS_B.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Wings_B"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight1" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "RotX",   "-180" },
+                { "RotY",   "11.474125" },
+                { "RotZ",   "0" },
+                { "ScaleZ", "10" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight1", "Name", "FOV" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "360.000000" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight1", "Name", "VOLUMETRIC" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.000000" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight2" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "RotX",   "180" },
+                { "RotY",   "-11.474003" },
+                { "RotZ",   "0" },
+                { "ScaleX", "10" },
+                { "ScaleY", "10" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight2", "Name", "FOV" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "360.000000" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "spotLight2", "Name", "VOLUMETRIC" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "Value", "0.000000" },
+              }
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\S-CLASS\ROYALPARTS\WINGS\WINGS_B.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "Wings_B" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -2841,19 +2841,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEHBOTANI.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RBottom1JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEHBOTANI.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RBottom1JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail10" />
                   <Property name="NameHash" value="1328110910" />
@@ -2873,13 +2873,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LBottom1JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LBottom1JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail9" />
                   <Property name="NameHash" value="4145976455" />
@@ -2899,19 +2899,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEHTOPANI.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTop1JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEHTOPANI.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RTop1JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail12" />
                   <Property name="NameHash" value="2703703058" />
@@ -2931,20 +2931,20 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTop1JNT"},
-                            VALUE_CHANGE_TABLE =
-                            {
-                                {"RotX", "180"},
-                            }
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTop1JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LTop1JNT" },
+              VALUE_CHANGE_TABLE =
+              {
+                { "RotX", "180" },
+              }
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LTop1JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail11" />
                   <Property name="NameHash" value="942566824" />
@@ -2964,19 +2964,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMESIDESANI.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMESIDESANI.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail8" />
                   <Property name="NameHash" value="2149164049" />
@@ -2996,13 +2996,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail7" />
                   <Property name="NameHash" value="279361920" />
@@ -3022,18 +3022,18 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVBOTA.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVBOTA.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="1328110910" />
@@ -3071,18 +3071,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVBOTB.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVBOTB.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail10" />
       <Property name="NameHash" value="1328110910" />
@@ -3120,18 +3120,18 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVTOP.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVTOP.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
     <Property value="TkSceneNodeData.xml">
       <Property name="Name" value="Trail11" />
       <Property name="NameHash" value="942566824" />
@@ -3169,19 +3169,19 @@ MODIFICATIONS           =
       <Property name="Children" />
     </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVTOPANI.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTop3JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENFLAMEVTOPANI.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RTop3JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail12" />
                   <Property name="NameHash" value="2703703058" />
@@ -3201,13 +3201,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTop3JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LTop3JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail11" />
                   <Property name="NameHash" value="942566824" />
@@ -3227,19 +3227,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY1.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY1.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail4" />
                   <Property name="NameHash" value="2310006842" />
@@ -3295,13 +3295,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail1" />
                   <Property name="NameHash" value="4190444725" />
@@ -3357,19 +3357,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY2.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY2.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail5" />
                   <Property name="NameHash" value="4272478380" />
@@ -3407,13 +3407,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail2" />
                   <Property name="NameHash" value="1624001807" />
@@ -3451,19 +3451,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY3.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY3.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail6" />
                   <Property name="NameHash" value="1738639638" />
@@ -3483,13 +3483,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail3" />
                   <Property name="NameHash" value="399211929" />
@@ -3509,19 +3509,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY4.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY4.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail4" />
                   <Property name="NameHash" value="2310006842" />
@@ -3559,13 +3559,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail1" />
                   <Property name="NameHash" value="4190444725" />
@@ -3603,19 +3603,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY5.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY5.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail4" />
                   <Property name="NameHash" value="2310006842" />
@@ -3653,13 +3653,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail1" />
                   <Property name="NameHash" value="4190444725" />
@@ -3697,19 +3697,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY6.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY6.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail4" />
                   <Property name="NameHash" value="2310006842" />
@@ -3729,13 +3729,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail1" />
                   <Property name="NameHash" value="4190444725" />
@@ -3755,19 +3755,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY7.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEBODY7.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "RTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail5" />
                   <Property name="NameHash" value="4272478380" />
@@ -3787,13 +3787,13 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LTbodyJNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "LTbodyJNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
                 <Property value="TkSceneNodeData.xml">
                   <Property name="Name" value="Trail2" />
                   <Property name="NameHash" value="1624001807" />
@@ -3813,19 +3813,19 @@ MODIFICATIONS           =
                   <Property name="Children" />
                 </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEL.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","LBackClaw3JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SENTINELSHIP\PARTS\ENGINEFLAMEL.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "LBackClaw3JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                         <Property value="TkSceneNodeData.xml">
                           <Property name="Name" value="Trail9" />
                           <Property name="NameHash" value="4145976455" />
@@ -3845,13 +3845,13 @@ MODIFICATIONS           =
                           <Property name="Children" />
                         </Property>
 ]]
-                        },
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","RBackClaw3JNT"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+            {
+              SPECIAL_KEY_WORDS = { "Name", "RBackClaw3JNT" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
                         <Property value="TkSceneNodeData.xml">
                           <Property name="Name" value="Trail10" />
                           <Property name="NameHash" value="1328110910" />
@@ -3871,19 +3871,19 @@ MODIFICATIONS           =
                           <Property name="Children" />
                         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYA.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","_Acc_A"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYA.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "_Acc_A" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -3921,19 +3921,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYC.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","acc3"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYC.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "acc3" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
             <Property value="TkSceneNodeData.xml">
               <Property name="Name" value="Trail" />
               <Property name="NameHash" value="1940499083" />
@@ -3953,19 +3953,19 @@ MODIFICATIONS           =
               <Property name="Children" />
             </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYF.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MirrorMerged_X4"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYF.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "MirrorMerged_X4" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -3985,19 +3985,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYG.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","Acc"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            CREATE_HOS = "TRUE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYG.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS = { "Name", "Acc" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              CREATE_HOS = "TRUE",
+              ADD =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4017,19 +4017,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYI.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","MirrorMerged_X2"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\ACCESSORIES\ACCESSORYI.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "MirrorMerged_X2" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4067,19 +4067,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSE\WINGSEEND_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","polySurface7"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSE\WINGSEEND_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "polySurface7" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4099,19 +4099,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSE\WINGSEEND_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","polySurface8"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSE\WINGSEEND_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "polySurface8" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4131,19 +4131,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSF\WINGSF_LEFT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","WingsLLeft"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSF\WINGSF_LEFT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "WingsLLeft" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4163,19 +4163,19 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-                {
-                    MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSF\WINGSF_RIGHT.SCENE.MBIN",
-                    EXML_CHANGE_TABLE =
-                    {
-                        {
-                            SPECIAL_KEY_WORDS = {"Name","polySurface1"},
-                            PRECEDING_KEY_WORDS = {"Children"},
-                            ADD_OPTION  = "ADDafterLINE",
-                            ADD =
-[[
+            },
+          }
+        },
+        {
+          MBIN_FILE_SOURCE  = "MODELS\COMMON\SPACECRAFT\SHUTTLE\WINGS\WINGSF\WINGSF_RIGHT.SCENE.MBIN",
+          EXML_CHANGE_TABLE =
+          {
+            {
+              SPECIAL_KEY_WORDS   = { "Name", "polySurface1" },
+              PRECEDING_KEY_WORDS = { "Children" },
+              ADD_OPTION          = "ADDafterLINE",
+              ADD                 =
+              [[
         <Property value="TkSceneNodeData.xml">
           <Property name="Name" value="Trail" />
           <Property name="NameHash" value="1940499083" />
@@ -4195,10 +4195,10 @@ MODIFICATIONS           =
           <Property name="Children" />
         </Property>
 ]]
-                        },
-                    }
-                },
-            }
-        }
+            },
+          }
+        },
+      }
     }
+  }
 }
