@@ -1,27 +1,23 @@
 Multiplier = 100
 Remainder = Multiplier
 
-if Multiplier == 100 then
+if Multiplier == 10 or Multiplier == 100 then
 	Remainder = Multiplier - 1
-elseif Multiplier ~= 100 then
+else
 	Remainder = Multiplier
 end
 
-Author = "Gumsk & KuroPeach"
-BaseDescription = "Multiplies Stack Sizes"
-GameVersion = "5.12"
-FileSource1 = "METADATA\GAMESTATE\DIFFICULTYCONFIG.MBIN"
-
 NMS_MOD_DEFINITION_CONTAINER = {
-	["MOD_FILENAME"]    = Multiplier.. "X Stack" ..GameVersion.. ".pak",
-	["MOD_DESCRIPTION"] = BaseDescription,
-	["MOD_AUTHOR"]      = Author,
-	["NMS_VERSION"]     = GameVersion,
+	["MOD_FILENAME"]    = "Multiplies Stack Sizes " ..Multiplier.. "X.pak",
+	["MOD_DESCRIPTION"] = "Multiplies Stack Sizes",
+	["MOD_AUTHOR"]      = "KuroPeach",
+	["LUA_AUTHOR"]      = "Gumsk & KuroPeach",
+	["NMS_VERSION"]     = "5.12",
 	["MODIFICATIONS"]   = {
 		{
 			["MBIN_CHANGE_TABLE"] = {
 				{
-					["MBIN_FILE_SOURCE"] = { FileSource1 },
+					["MBIN_FILE_SOURCE"] = "METADATA\GAMESTATE\DIFFICULTYCONFIG.MBIN",
 					["EXML_CHANGE_TABLE"] = {
 						{
 							["SPECIAL_KEY_WORDS"] = { "InventoryStackLimits", "GcDifficultySettingCommonData.xml" },
@@ -40,6 +36,7 @@ NMS_MOD_DEFINITION_CONTAINER = {
 							},
 						},
 						{
+							["PRECEDING_KEY_WORDS"] = { "InventoryStackLimitsOptionData" },
 							["REPLACE_TYPE"] = "ALL",
 							["MATH_OPERATION"] = "*",
 							["VALUE_CHANGE_TABLE"] = {
@@ -61,6 +58,7 @@ NMS_MOD_DEFINITION_CONTAINER = {
 							},
 						},
 						{
+							["PRECEDING_KEY_WORDS"] = { "InventoryStackLimitsOptionData" },
 							["REPLACE_TYPE"] = "ALL",
 							["MATH_OPERATION"] = "+",
 							["VALUE_CHANGE_TABLE"] = {
